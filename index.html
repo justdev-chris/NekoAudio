@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NekoAudio · Live Audio Processor</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #0a0a0f;
+            color: #e0e0e0;
+            font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+
+        /* header */
+        .logo-section {
+            text-align: center;
+            margin-bottom: 16px;
+        }
+
+        .logo-img {
+            height: 160px;
+            width: auto;
+            margin-bottom: 16px;
+        }
+
+        .logo-text {
+            font-size: 48px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffb347, #ff6d5a);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            letter-spacing: -0.5px;
+        }
+
+        .tagline {
+            font-size: 20px;
+            color: #a0a0b0;
+            margin-bottom: 48px;
+            text-align: center;
+        }
+
+        /* features grid */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            margin: 48px 0;
+        }
+
+        .feature-card {
+            background: #14141e;
+            border-radius: 20px;
+            padding: 24px;
+            border: 1px solid #2a2a35;
+            transition: 0.2s;
+        }
+
+        .feature-card:hover {
+            border-color: #ff6d5a;
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+        }
+
+        .feature-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #ffb347;
+        }
+
+        .feature-desc {
+            font-size: 14px;
+            color: #a0a0b0;
+        }
+
+        /* buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 40px 0;
+            justify-content: center;
+        }
+
+        .btn-primary {
+            background: #ff6d5a;
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: 0.1s;
+        }
+
+        .btn-primary:hover {
+            background: #ff8a7a;
+            transform: scale(1.02);
+        }
+
+        .btn-secondary {
+            background: #2a2a35;
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-secondary:hover {
+            background: #3a3a48;
+        }
+
+        /* effects sections */
+        .effects-category {
+            background: #0e0e16;
+            border-radius: 24px;
+            padding: 24px;
+            margin: 24px 0;
+            border: 1px solid #2a2a35;
+        }
+
+        .effects-category h3 {
+            color: #ffb347;
+            margin-bottom: 16px;
+            font-size: 18px;
+        }
+
+        .effects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+            gap: 10px;
+        }
+
+        .effect-tag {
+            background: #1d1d28;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 12px;
+            text-align: center;
+            color: #ccc;
+        }
+
+        .effect-count {
+            color: #ff6d5a;
+            font-size: 13px;
+            margin-left: 12px;
+        }
+
+        hr {
+            border-color: #2a2a35;
+            margin: 40px 0;
+        }
+
+        .footer {
+            text-align: center;
+            color: #606070;
+            font-size: 13px;
+            margin-top: 60px;
+        }
+
+        a {
+            color: #ff8a7a;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo-section">
+            <img src="NekoAudioLogoRaw.png" alt="NekoAudio" class="logo-img">
+            <div class="logo-text">NekoAudio</div>
+        </div>
+        <div class="tagline">live audio processor · studio‑grade effects · real‑time · 33+ effects</div>
+
+        <div class="cta-buttons">
+            <a href="app/" class="btn-primary">🎛️ LAUNCH NEKOAUDIO</a>
+            <a href="https://github.com/justchrisdevmeow/NekoAudio" class="btn-secondary">📦 GitHub</a>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Real‑Time Processing</div>
+                <div class="feature-desc">Tweak effects while playing – no rendering, no waiting.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎛️</div>
+                <div class="feature-title">33+ Effects</div>
+                <div class="feature-desc">Time, filters, distortion, modulation, spectral, spatial.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">Presets</div>
+                <div class="feature-desc">Clean, Slowed, Interlude, Cathedral, Lo‑Fi, Dreamscape, 8D.</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💾</div>
+                <div class="feature-title">Export WAV / MP3</div>
+                <div class="feature-desc">Save your processed audio to HD formats.</div>
+            </div>
+        </div>
+
+        <!-- TIME CATEGORY -->
+        <div class="effects-category">
+            <h3>⏱️ TIME <span class="effect-count">5 effects</span></h3>
+            <div class="effects-grid">
+                <span class="effect-tag">Speed</span>
+                <span class="effect-tag">Pitch Shift</span>
+                <span class="effect-tag">Reverb</span>
+                <span class="effect-tag">Delay</span>
+                <span class="effect-tag">Delay Feedback</span>
+            </div>
+        </div>
+
+        <!-- FILTERS CATEGORY -->
+        <div class="effects-category">
+            <h3>🎚️ FILTERS <span class="effect-count">5 effects</span></h3>
+            <div class="effects-grid">
+                <span class="effect-tag">Low-pass</span>
+                <span class="effect-tag">High-pass</span>
+                <span class="effect-tag">Band-pass</span>
+                <span class="effect-tag">Notch</span>
+                <span class="effect-tag">Resonance (Q)</span>
+            </div>
+        </div>
+
+        <!-- DESTROY CATEGORY -->
+        <div class="effects-category">
+            <h3>💥 DESTROY <span class="effect-count">6 effects</span></h3>
+            <div class="effects-grid">
+                <span class="effect-tag">Distortion</span>
+                <span class="effect-tag">Bitcrush</span>
+                <span class="effect-tag">Ring Modulation</span>
+                <span class="effect-tag">Noise Gate</span>
+                <span class="effect-tag">Downsample</span>
+                <span class="effect-tag">Tape Stop</span>
+            </div>
+        </div>
+
+        <!-- MODULATION CATEGORY -->
+        <div class="effects-category">
+            <h3>🌀 MODULATION <span class="effect-count">7 effects</span></h3>
+            <div class="effects-grid">
+                <span class="effect-tag">Chorus</span>
+                <span class="effect-tag">Flanger</span>
+                <span class="effect-tag">Phaser</span>
+                <span class="effect-tag">Tremolo</span>
+                <span class="effect-tag">Vibrato</span>
+                <span class="effect-tag">Auto-pan</span>
+                <span class="effect-tag">Reverse</span>
+            </div>
+        </div>
+
+        <!-- SPECTRAL CATEGORY -->
+        <div class="effects-category">
+            <h3>🌌 SPECTRAL <span class="effect-count">6 effects</span></h3>
+            <div class="effects-grid">
+                <span class="effect-tag">Stutter / Glitch</span>
+                <span class="effect-tag">Robot Voice</span>
+                <span class="effect-tag">Compressor</span>
+                <span class="effect-tag">Stereo Width</span>
+                <span class="effect-tag">Normalize</span>
+                <span class="effect-tag">Volume</span>
+            </div>
+        </div>
+
+        <!-- SPATIAL CATEGORY -->
+        <div class="effects-category">
+            <h3>🎧 SPATIAL <span class="effect-count">5 effects</span></h3>
+            <div class="effects-grid">
+                <span class="effect-tag">X Position (L/R)</span>
+                <span class="effect-tag">Y Position (U/D)</span>
+                <span class="effect-tag">Z Position (F/B)</span>
+                <span class="effect-tag">Room Size</span>
+                <span class="effect-tag">Motion Path</span>
+            </div>
+        </div>
+
+        <!-- TOTAL COUNT -->
+        <div style="text-align: center; margin: 20px 0; color: #ff6d5a; font-size: 14px;">
+            ⚡ Total: 34 effects including Master controls
+        </div>
+
+        <div class="cta-buttons" style="justify-content: center;">
+            <a href="app/" class="btn-primary">🎛️ START PROCESSING</a>
+        </div>
+
+        <hr>
+
+        <div class="footer">
+            <p>NekoAudio — open source · no data collection · works entirely in your browser</p>
+            <p style="margin-top: 12px;">⚡ Drag & drop audio · 🔥 real‑time effects · 💾 export WAV / MP3</p>
+        </div>
+    </div>
+</body>
+</html>
